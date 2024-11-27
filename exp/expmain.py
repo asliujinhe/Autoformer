@@ -4,7 +4,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)03d %(levelname)-8s [%(filename)
     level=logging.INFO)
 
 from data_provider.data_factory import data_provider
-from exp.exp_basic import Exp_Basic
+from exp.expbasic import ExpBasic
 from models import Informer, Autoformer, Transformer, Reformer
 from utils.tools import EarlyStopping, adjust_learning_rate, visual
 from utils.metrics import metric
@@ -18,14 +18,13 @@ import os
 import time
 
 import warnings
-import numpy as np
 
 warnings.filterwarnings('ignore')
 
 
-class Exp_Main(Exp_Basic):
+class ExpMain(ExpBasic):
     def __init__(self, args):
-        super(Exp_Main, self).__init__(args)
+        super(ExpMain, self).__init__(args)
 
     def _build_model(self):
         model_dict = {

@@ -1,11 +1,11 @@
 import argparse
 import os
 import torch
-from exp.exp_main import Exp_Main
+from exp.expmain import ExpMain
 import random
 import numpy as np
 
-
+from transformers import AutoformerModel
 def main():
     fix_seed = 2021
     random.seed(fix_seed)
@@ -90,7 +90,7 @@ def main():
     print('Args in experiment:')
     print(args)
 
-    Exp = Exp_Main
+    Exp = ExpMain
 
     if args.is_training:
         for ii in range(args.itr):

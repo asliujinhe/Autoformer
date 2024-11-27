@@ -2,7 +2,7 @@ import os
 import torch
 
 
-class Exp_Basic(object):
+class ExpBasic(object):
     def __init__(self, args):
         self.args = args
         self.device = self._acquire_device()
@@ -10,7 +10,6 @@ class Exp_Basic(object):
 
     def _build_model(self):
         raise NotImplementedError
-        return None
 
     def _acquire_device(self):
         if self.args.use_gpu:

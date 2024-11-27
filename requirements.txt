@@ -1,6 +1,10 @@
-pandas
-scikit-learn
+pandas~=2.2.3
+scikit-learn~=1.5.2
 torchvision
-numpy
-matplotlib
+numpy~=2.1.2
+matplotlib~=3.9.2
 reformer_pytorch
+
+torch~=2.5.1
+requests~=2.32.3
+transformers~=4.44.2
