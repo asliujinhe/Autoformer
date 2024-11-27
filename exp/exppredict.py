@@ -5,7 +5,7 @@ import numpy as np
 import torch
 
 from data_provider.data_factory import data_provider
-from models import Informer, Autoformer, Transformer, Reformer
+from models import Autoformer
 
 # Set up logging configuration
 logging.basicConfig(format='%(asctime)s,%(msecs)03d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
@@ -52,9 +52,6 @@ class ExpPredict:
         """
         model_dict = {
             'Autoformer': Autoformer,
-            'Transformer': Transformer,
-            'Informer': Informer,
-            'Reformer': Reformer,
         }
         model = model_dict[self.args.model].Model(self.args).float()
 
